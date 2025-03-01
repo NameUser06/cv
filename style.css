@@ -1,0 +1,350 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* En-tête et navigation */
+header {
+    padding: 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.nav-button {
+    margin: 0 10px;
+    padding: 8px 20px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+}
+
+.nav-button:hover {
+    background-color: #ddd;
+}
+
+.nav-button.active {
+    background-color: #555;
+    color: white;
+}
+
+/* Profil */
+.profile {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo-container {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.location {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Présentation */
+.presentation-title {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.presentation-content {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.presentation-text {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.presentation-text p {
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.placeholder-image {
+    flex: 1;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+/* Sections */
+.section-title {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Expériences */
+.timeline-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.timeline {
+    position: relative;
+    margin: 30px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #333;
+    top: 50%;
+    left: 0;
+    right: 50px;
+}
+
+.timeline::after {
+    content: '→';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.timeline-points {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.city {
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.city::before {
+    content: '|';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.workplace {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.download-button {
+    background-color: #f0f0f0;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.social-link {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* Compétences */
+.skills-container {
+    display: flex;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.skills-list {
+    flex: 1;
+    list-style-type: none;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.skills-list li::before {
+    content: '- ';
+    position: absolute;
+    left: 0;
+}
+
+.skill-level {
+    margin-left: 10px;
+}
+
+/* Projets */
+.projects-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Formulaire de contact */
+.contact-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+}
+
+.submit-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-container {
+        margin: 0 auto 20px;
+    }
+
+    .presentation-content {
+        flex-direction: column;
+    }
+
+    .placeholder-image {
+        margin-top: 20px;
+        min-height: 100px;
+    }
+
+    .timeline-points {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .city {
+        min-width: 80px;
+    }
+}
+
+/* Animations et effets dynamiques */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.nav-button, .download-button, .submit-button {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-button:hover, .download-button:hover, .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pour rendre les sections interactives avec JavaScript */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Section active par défaut */
+#presentation-section {
+    display: block;
+}

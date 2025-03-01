@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antoine QUILLET - CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <button class="nav-button active" onclick="showSection('presentation-section')">Présentation</button>
+                <button class="nav-button" onclick="showSection('experiences-section')">Expériences</button>
+                <button class="nav-button" onclick="showSection('projects-section')">Projets</button>
+                <button class="nav-button" onclick="showSection('contact-section')">Contact</button>
+            </nav>
+
+            <div class="profile fade-in">
+                <div class="photo-container">
+                    <span>photo</span>
+                </div>
+                <div class="info">
+                    <h1>Antoine QUILLET</h1>
+                    <h2>SOFTWARE ENGINEER (en devenir)</h2>
+                    <p class="location">Paris</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Section Présentation -->
+            <section id="presentation-section" class="section active">
+                <div class="presentation-title">Présentation :</div>
+                <div class="presentation-content">
+                    <div class="presentation-text">
+                        <p>Salut, Antoine, 26 ans. Passionné par l'innovation et les nouvelles technologies, je me réinvente après 10 ans d'expérience en restauration. Aujourd'hui, je me lance dans le développement web et l'IA avec curiosité et détermination. J'apprends, j'expérimente et je monte en compétences chaque jour.</p>
+                        <p>Grâce à mon parcours, j'ai développé des soft skills essentiels : adaptabilité, gestion du stress, esprit d'équipe. Des atouts précieux pour évoluer dans un environnement en constant changement.</p>
+                    </div>
+                    <div class="placeholder-image">
+                        <span>Photo illustrative</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Expériences -->
+            <section id="experiences-section" class="section">
+                <div class="section-title">Expériences</div>
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <div class="timeline-points">
+                            <div class="city">
+                                <span>Avignon</span>
+                                <div class="workplace">Brasserie Théâtre</div>
+                            </div>
+                            <div class="city">
+                                <span>Nice</span>
+                                <div class="workplace">Gabin</div>
+                            </div>
+                            <div class="city">
+                                <span>Nice</span>
+                                <div class="workplace">Côté lounge</div>
+                            </div>
+                            <div class="city">
+                                <span>Paris</span>
+                                <div class="workplace">Pâtrollerie Cap'Estal</div>
+                            </div>
+                            <div class="city">
+                                <span>Paris</span>
+                                <div class="workplace">Taillevent</div>
+                            </div>
+                            <div class="city">
+                                <span>Paris</span>
+                                <div class="workplace">Horton</div>
+                            </div>
+                            <div class="city">
+                                <span>Paris</span>
+                                <div class="workplace">Ogata</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="download-button">CV Chef de rang à télécharger en pdf.</button>
+                    <span class="social-link">Insta Cuisine</span>
+                </div>
+
+                <!-- Compétences -->
+                <div class="section-title">Compétences</div>
+                <div class="skills-container">
+                    <ul class="skills-list">
+                        <li>Service & Relation Client <span class="skill-level">✅</span></li>
+                        <li>Gestion d'équipe <span class="skill-level">🔥</span></li>
+                        <li>HTML / CSS <span class="skill-level">❌</span></li>
+                        <li>Python <span class="skill-level">❌</span></li>
+                        <li>Digital Marketing <span class="skill-level">📝</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section Projets -->
+            <section id="projects-section" class="section">
+                <div class="section-title">Projets</div>
+                <div class="projects-container">
+                    <p>En cours de progression</p>
+                </div>
+            </section>
+
+            <!-- Section Contact -->
+            <section id="contact-section" class="section">
+                <div class="section-title">Contact</div>
+                <div class="contact-container">
+                    <form class="contact-form">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="submit" class="submit-button">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Liens : <a href="#" target="_blank">GitHub</a>, <a href="#" target="_blank">Linkedin</a>
+        </footer>
+    </div>
+
+    <script>
+        // Fonction pour afficher les sections
+        function showSection(sectionId) {
+            // Cacher toutes les sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Mettre à jour les boutons de navigation
+            const buttons = document.querySelectorAll('.nav-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Activer le bouton correspondant
+            event.target.classList.add('active');
+        }
+
+        // Animation des éléments au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.profile, .presentation-content, .timeline, .skills-container');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('fade-in');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
